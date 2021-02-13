@@ -10,8 +10,6 @@ import UIKit
 class PackageViewCell: UICollectionViewCell {
     static let identifier = "PackageViewCell"
     
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
