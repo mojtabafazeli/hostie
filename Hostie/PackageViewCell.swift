@@ -8,21 +8,20 @@
 import UIKit
 
 class PackageViewCell: UICollectionViewCell {
-    static let identifier = "PackageViewCell"
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+    @IBOutlet var name: UILabel!
+    @IBOutlet var descript: UITextView!
+    @IBOutlet var agent: UILabel!
+    @IBOutlet var price: UILabel!
+    @IBOutlet var rate: UILabel!
+    @IBOutlet var image: UIImageView!
     
-    required init?(coder: NSCoder) {
-        fatalError()
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    func configure(package: Package) {
+        name.text = package.name
+        descript.text = package.description
+        agent.text = package.agent
+        price.text = String(format: "%.2f", package.price)
+        rate.text = String(format: "%f" , package.rate)
+
     }
 }

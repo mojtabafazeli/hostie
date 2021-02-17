@@ -14,18 +14,20 @@
 		3F93B34125B65914008B2F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F93B34025B65914008B2F66 /* Assets.xcassets */; };
 		3F93B34425B65914008B2F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F93B34225B65914008B2F66 /* LaunchScreen.storyboard */; };
 		3F93B34E25D726E7008B2F66 /* PackageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93B34D25D726E7008B2F66 /* PackageViewCell.swift */; };
+		3F93B35C25DC994A008B2F66 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F93B35B25DC9949008B2F66 /* Package.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F93B33425B6590D008B2F66 /* Hostie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hostie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F93B33725B6590D008B2F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F93B33925B6590D008B2F66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3F93B33B25B6590D008B2F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F93B33B25B6590D008B2F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Hostie/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		3F93B33E25B6590D008B2F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F93B34025B65914008B2F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F93B34325B65914008B2F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F93B34525B65914008B2F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F93B34D25D726E7008B2F66 /* PackageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackageViewCell.swift; sourceTree = "<group>"; };
+		3F93B35B25DC9949008B2F66 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +62,39 @@
 			children = (
 				3F93B33725B6590D008B2F66 /* AppDelegate.swift */,
 				3F93B33925B6590D008B2F66 /* SceneDelegate.swift */,
-				3F93B33B25B6590D008B2F66 /* ViewController.swift */,
 				3F93B33D25B6590D008B2F66 /* Main.storyboard */,
-				3F93B34025B65914008B2F66 /* Assets.xcassets */,
 				3F93B34225B65914008B2F66 /* LaunchScreen.storyboard */,
-				3F93B34525B65914008B2F66 /* Info.plist */,
+				3F93B33B25B6590D008B2F66 /* ViewController.swift */,
 				3F93B34D25D726E7008B2F66 /* PackageViewCell.swift */,
+				3F93B35B25DC9949008B2F66 /* Package.swift */,
+				3F93B35F25DC9ACB008B2F66 /* Controller */,
+				3F93B35E25DC9AB3008B2F66 /* Model */,
+				3F93B36025DC9ADF008B2F66 /* View */,
+				3F93B34025B65914008B2F66 /* Assets.xcassets */,
+				3F93B34525B65914008B2F66 /* Info.plist */,
 			);
 			path = Hostie;
+			sourceTree = "<group>";
+		};
+		3F93B35E25DC9AB3008B2F66 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F93B35F25DC9ACB008B2F66 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3F93B36025DC9ADF008B2F66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F93B33C25B6590D008B2F66 /* ViewController.swift in Sources */,
+				3F93B35C25DC994A008B2F66 /* Package.swift in Sources */,
 				3F93B33825B6590D008B2F66 /* AppDelegate.swift in Sources */,
 				3F93B33A25B6590D008B2F66 /* SceneDelegate.swift in Sources */,
 				3F93B34E25D726E7008B2F66 /* PackageViewCell.swift in Sources */,

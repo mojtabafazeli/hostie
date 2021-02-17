@@ -8,22 +8,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--Hostie-->
         <scene sceneID="iDz-hA-PiS">
             <objects>
-                <collectionViewController id="ImE-hT-SgX" sceneMemberID="viewController">
+                <collectionViewController id="ImE-hT-SgX" userLabel="Hostie" customClass="ViewController" customModule="Hostie" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" semanticContentAttribute="spatial" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oXc-Kj-hST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <viewLayoutGuide key="contentLayoutGuide" id="tMb-qa-F5U"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="aLc-7B-4Sb"/>
-                        <collectionViewLayout key="collectionViewLayout" id="egP-kr-c9h"/>
+                        <viewLayoutGuide key="contentLayoutGuide" id="tMb-qa-F5U" propertyAccessControl="none"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="aLc-7B-4Sb" propertyAccessControl="none"/>
+                        <collectionViewLayout key="collectionViewLayout" id="NvK-eW-jS6"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-eP-i81" customClass="PackageViewCell" customModule="Hostie" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="cell" translatesAutoresizingMaskIntoConstraints="NO" id="wKa-eP-i81" customClass="PackageViewCell" customModule="Hostie" customModuleProvider="target">
                                 <rect key="frame" x="9" y="0.0" width="396" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="slg-rX-4Sg">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qZX-J0-XMS">
                                     <rect key="frame" x="0.0" y="0.0" width="396" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -142,26 +142,25 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="LcH-CS-b5Y" firstAttribute="leading" secondItem="bQX-y9-dHg" secondAttribute="trailing" constant="8" id="2zK-QZ-WqD"/>
-                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="top" secondItem="slg-rX-4Sg" secondAttribute="top" constant="8" id="6Tc-4Z-U9C"/>
-                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="centerY" secondItem="slg-rX-4Sg" secondAttribute="centerY" id="8wu-G8-axP"/>
+                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="top" secondItem="qZX-J0-XMS" secondAttribute="top" constant="8" id="6Tc-4Z-U9C"/>
+                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="centerY" secondItem="qZX-J0-XMS" secondAttribute="centerY" id="8wu-G8-axP"/>
                                         <constraint firstAttribute="trailing" secondItem="LcH-CS-b5Y" secondAttribute="trailing" constant="8" id="CkE-EL-oCX"/>
                                         <constraint firstAttribute="bottom" secondItem="LcH-CS-b5Y" secondAttribute="bottom" constant="8" id="Eqt-kZ-8Qk"/>
-                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="leading" secondItem="slg-rX-4Sg" secondAttribute="leading" constant="8" id="FRz-VU-LWb"/>
-                                        <constraint firstItem="LcH-CS-b5Y" firstAttribute="top" secondItem="slg-rX-4Sg" secondAttribute="top" constant="8" id="Vzr-Kw-JXc"/>
+                                        <constraint firstItem="bQX-y9-dHg" firstAttribute="leading" secondItem="qZX-J0-XMS" secondAttribute="leading" constant="8" id="FRz-VU-LWb"/>
+                                        <constraint firstItem="LcH-CS-b5Y" firstAttribute="top" secondItem="qZX-J0-XMS" secondAttribute="top" constant="8" id="Vzr-Kw-JXc"/>
                                         <constraint firstItem="LcH-CS-b5Y" firstAttribute="leading" secondItem="bQX-y9-dHg" secondAttribute="trailing" constant="8" id="tPj-jI-YYD"/>
                                         <constraint firstAttribute="bottom" secondItem="bQX-y9-dHg" secondAttribute="bottom" constant="8" id="vVQ-CQ-kAQ"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <size key="customSize" width="396" height="128"/>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uY4-hQ-zWU">
-                                <rect key="frame" x="182" y="138" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z1T-Ap-1iN">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="agent" destination="AOZ-ce-HA0" id="0ZA-uQ-TS4"/>
+                                    <outlet property="description" destination="czm-lU-ndw" id="39g-rl-upp"/>
+                                    <outlet property="image" destination="bQX-y9-dHg" id="EVM-b6-qSV"/>
+                                    <outlet property="name" destination="VP4-iG-9JZ" id="QFH-Ie-cAn"/>
+                                    <outlet property="price" destination="Dxa-vr-ecT" id="Qj6-K2-vKV"/>
+                                    <outlet property="rate" destination="qOO-EJ-OIh" id="ZCP-cO-odz"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

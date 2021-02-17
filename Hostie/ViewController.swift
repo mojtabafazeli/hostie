@@ -7,29 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+class ViewController: UICollectionViewController {
     
-    
-    private let collectionView = UICollectionView (
-        frame: .zero,
-        collectionViewLayout: UICollectionViewLayout()
-    )
+    let dataSource: [Package] = [
+        Package(name: "Downtown Tour", description: "Downtown Tour", agent:"John Smith", price: 100.0, rate: 5, image: ""),
+        Package(name: "Parliament Hill", description: "Parliament Hill", agent:"Jane Jones", price: 200.0, rate: 4, image: "")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        view.addSubview(collectionView)
+        print("Hello")
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return PackageViewCell()
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("Hello3")
+        var cell = UICollectionViewCell()
+        if let packageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PackageViewCell {
+            packageCell.configure(package: dataSource[indexPath.row])
+            cell = packageCell
+        } 
+        print("Hello4")
+        return cell
     }
 
 }
