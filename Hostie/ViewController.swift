@@ -11,6 +11,21 @@ class ViewController: UICollectionViewController  {
 
     var dataSource: [Package] = DataProvider.dataProvider.getDescSortedData()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // ... other configuration ...
+        
+        let layout = collectionView.collectionViewLayout
+        if let flowLayout = layout as? UICollectionViewFlowLayout {
+            flowLayout.estimatedItemSize = CGSize(
+                width: collectionView.widestCellWidth,
+                // Make the height a reasonable estimate to
+                // ensure the scroll bar remains smooth
+                height: 200
+            )
+        }
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
     }
@@ -21,6 +36,8 @@ class ViewController: UICollectionViewController  {
             packageCell.configure(package: dataSource[indexPath.row])
             cell = packageCell
         }
+        cell.layer.borderWidth = Constants.borderWidth
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         return cell
     }
     
@@ -28,6 +45,19 @@ class ViewController: UICollectionViewController  {
         print("Finished")
     }
     
+}
+
+private enum Constants {
+    static let spacing: CGFloat = 16
+    static let borderWidth: CGFloat = 0.5
+    static let reuseID = "cell"
+}
+
+extension UICollectionView {
+    var widestCellWidth: CGFloat {
+        let insets = contentInset.left + contentInset.right
+        return bounds.width - insets
+    }
 }
 
 
