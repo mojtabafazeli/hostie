@@ -21,7 +21,7 @@ class PackageViewCell: UICollectionViewCell {
         descript.text = package.description
         agent.text = package.agent
         price.text = String(format: "%.2f", package.price)
-        rate.text = String(format: "%f" , package.rate)
-
+        rate.text = String(package.rate)
+        image.image = package.image
     }
 }
